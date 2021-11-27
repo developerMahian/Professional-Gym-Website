@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Poppins:wght@300;400;500;700;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bg-danger {
+  background-color: #c11325 !important;
+}
+
+/* Nav toggler */
+.navbar-brand,
+.nav-link {
+  font-family: 'Poppins', sans-serif;
+}
+
+header .ham-burger {
+  display: inline-block;
+  position: relative;
+  z-index: 100;
+}
+
+header .ham-burger span {
+  display: block;
+  width: 32px;
+  height: 3px;
+  border-radius: 3em;
+  margin-bottom: 7px;
+  background-color: white;
+  transition: all ease-in-out 0.4s;
+}
+
+header .ham-burger.toggled span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+header .ham-burger.toggled span:nth-child(2) {
+  opacity: 0;
+}
+
+header .ham-burger.toggled span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Navbar */
+nav {
+  background-color: #000;
+}
+
+header .navbar-ul {
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding-top: 5em;
+  width: 280px !important;
+  height: 100%;
+  background-color: rgb(44, 44, 33);
+  transform: translateX(100%);
+  transition: transform ease-in-out 0.4s;
+}
+
+header .navbar-ul.show-nav {
+  transform: translateX(0%);
+}
+
+header .nav-link {
+  color: white !important;
+  font-size: 26px;
+  font-weight: 500;
+  padding: 14px 28px;
+  position: relative;
+}
+
+header .nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgba(0, 0, 0, 0.225);
+  z-index: -1;
+  transition: all ease-in-out 0.25s;
+}
+
+header .nav-link:hover::before {
+  width: 100%;
+}
+
+/* banner */
+.banner {
+  background-image: url("../images/home.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-position: 4%;  
+}
+
+@media(max-width: 1024px) {
+  .banner {
+    background-position: 65%;
+  }
+}
+
+.banner .heading-1 {
+  font-size: 60px;
+}
+
+.banner .heading-2 {
+  font-size: 34px;
+  letter-spacing: 2px;
+}
+
+.banner h1 span {
+  color: #c11325;
+}
+
+@media(max-width: 768px) {
+  .banner .heading-1 {
+    font-size: 40px;
+  }  
+}
